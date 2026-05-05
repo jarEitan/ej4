@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form>
+    <input type="text" name="nombre"/>
+    <input type="number" name="edad"/>
+    <input type="number" name="DNI"/>
+
+<p>
+    <input type="radio" name="trabaja" value="si"/>
+    <input type="radio" name="trabaja" value="no"/>
+</p>
+
+<p>
+    <select name="tipoEmpleo">
+        <option>Relación de dependencia</option>
+        <option>Monotributista</option>
+        <option>Autónomo</option>
+        <option>Desempleado</option>
+    </select>
+</p>
+
+
+    <input type="number" name="ingresoMensual"/>
+<p>
+    <input type="radio" name="deudas" value="si"/>
+    <input type="radio" name="deudas" value="no"/>
+</p>
+
+<input type="checkbox" name="tipoDeuda" value="Tarjeta de crédito"/>
+<input type="checkbox" name="tipoDeuda" value="Préstamo bancario"/>
+<input type="checkbox" name="tipoDeuda" value="Préstamo informal"/>
+
+</form>
+
+<input type="number" name="montoSolucitado"/>
+<p>
+    <select name="plazo">
+        <option>6 meses</option>
+        <option>12 meses</option>
+        <option>24 meses</option>
+    </select>
+</p>
