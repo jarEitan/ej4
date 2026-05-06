@@ -2,65 +2,86 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="text-center titulo">
+    <h1 class="display-4"><strong>BANCO EL TUKI FC</strong></h1>
+    <p><strong>El banco que te toca</strong></p>
 </div>
 
-<form>
-    <label>Nombre</label>
-    <input type="text" name="nombre"/>
+<form asp-action="Resultado" method="post">
 
-    <label>Edad</label>
-    <input type="number" name="edad"/>
+    <div class="form-group">
+        <h2>Informacion Personal</h2>
 
-    <label>DNI</label>
-    <input type="number" name="DNI"/>
+        <label>Nombre</label>
+        <input type="text" name="nombre"/>
 
-<p>
-    <label>Trabaja</label>
-    <input type="radio" name="trabaja" value="si"/>
-    <label>Si</label>
-    <input type="radio" name="trabaja" value="no"/>
-    <label>No</label>
-</p>
+        <label>Edad</label>
+        <input type="number" name="edad"/>
 
-<p>
-    <label>Tipo de empleo</label>
-    <select name="tipoEmpleo">
-        <option>Relación de dependencia</option>
-        <option>Monotributista</option>
-        <option>Autónomo</option>
-        <option>Desempleado</option>
-    </select>
-</p>
+        <label>DNI</label>
+        <input type="number" name="DNI"/>
+    </div>
 
+    <div class="form-group">
+        <h2>Situación Laboral</h2>
 
-    <label>Ingreso mensual</label>
-    <input type="number" name="ingresoMensual"/>
-<p>
-    <label>¿Tiene deudas?</label>
-    <input type="radio" name="deudas" value="si"/>
-    <label>Si</label>
-    <input type="radio" name="deudas" value="no"/>
-    <label>No</label>
-</p>
+    <p>
+        <label>Trabaja</label>
+        <input type="radio" name="trabaja" value="si"/>
+        <label>Si</label>
+        <input type="radio" name="trabaja" value="no"/>
+        <label>No</label>
+    </p>
 
-<label>Tipo de deuda</label>
-<input type="checkbox" name="tipoDeuda" value="Tarjeta de crédito"/>
-<label>Tarjeta de crédito</label>
-<input type="checkbox" name="tipoDeuda" value="Préstamo bancario"/>
-<label>Préstamo bancario</label>
-<input type="checkbox" name="tipoDeuda" value="Préstamo informal"/>
-<label>Préstamo informal</label>
+    <p>
+        <label>Tipo de empleo</label>
+        <select name="tipoEmpleo">
+            <option>Relación de dependencia</option>
+            <option>Monotributista</option>
+            <option>Autónomo</option>
+            <option>Desempleado</option>
+        </select>
+    </p>
+    </div>
 
+    <div class="form-group">
+        <h2>Información económica</h2>
+
+            <label>Ingreso mensual</label>
+            <input type="number" name="ingresoMensual"/>
+        <p>
+            <label>¿Tiene deudas?</label>
+            <input type="radio" name="deudas" value="si"/>
+            <label>Si</label>
+            <input type="radio" name="deudas" value="no"/>
+            <label>No</label>
+        </p>
+
+        <label>Tipo de deuda</label>
+        <input type="checkbox" name="tipoDeuda" value="Tarjeta de crédito"/>
+        <label>Tarjeta de crédito</label>
+        <input type="checkbox" name="tipoDeuda" value="Préstamo bancario"/>
+        <label>Préstamo bancario</label>
+        <input type="checkbox" name="tipoDeuda" value="Préstamo informal"/>
+        <label>Préstamo informal</label>
+    </div>
+
+    <div class="form-group">
+        <h2>Información del préstamo</h2>
+
+        <input type="number" name="montoSolucitado"/>
+    <p>
+        <select name="plazo">
+            <option>6 meses</option>
+            <option>12 meses</option>
+            <option>24 meses</option>
+        </select>
+    </p>
+    </div>
+
+    <label>Aceptar términos y condiciones</label>
+    <input type="checkbox" name="aceptarTerminos" value="true"/>
+
+    <button type="submit">Enviar Datos</button>
 </form>
-
-<input type="number" name="montoSolucitado"/>
-<p>
-    <select name="plazo">
-        <option>6 meses</option>
-        <option>12 meses</option>
-        <option>24 meses</option>
-    </select>
-</p>

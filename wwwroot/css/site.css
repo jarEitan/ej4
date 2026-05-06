@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #B3AF8F;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -28,4 +29,18 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.titulo {
+  background-color: #FFC482;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 1%;
+}
+
+form {
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 5%;
+  background-color: white;
 }
