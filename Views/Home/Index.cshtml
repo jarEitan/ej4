@@ -2,7 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="text-center titulo">
     <h1 class="display-4"><strong>BANCO EL TUKI FC</strong></h1>
     <p><strong>El banco que te toca</strong></p>
@@ -11,77 +10,136 @@
 <form asp-action="Resultado" method="post">
 
     <div class="form-group">
-        <h2>Informacion Personal</h2>
+        <h2>Información Personal</h2>
 
-        <label>Nombre</label>
-        <input type="text" name="nombre"/>
+        <div>
+            <label>Nombre</label>
+        </div>
+        <div>
+            <input type="text" name="nombre" />
+        </div>
 
-        <label>Edad</label>
-        <input type="number" name="edad"/>
+        <div>
+            <label>Edad</label>
+        </div>
+        <div>
+            <input type="number" name="edad" />
+        </div>
 
-        <label>DNI</label>
-        <input type="number" name="DNI"/>
+        <div>
+            <label>DNI</label>
+        </div>
+        <div>
+            <input type="number" name="DNI" />
+        </div>
     </div>
 
     <div class="form-group">
         <h2>Situación Laboral</h2>
 
-    <p>
-        <label>Trabaja</label>
-        <input type="radio" name="trabaja" value="si"/>
-        <label>Si</label>
-        <input type="radio" name="trabaja" value="no"/>
-        <label>No</label>
-    </p>
+        <div>
+            <label>Trabaja</label>
+        </div>
 
-    <p>
-        <label>Tipo de empleo</label>
-        <select name="tipoEmpleo">
-            <option>Relación de dependencia</option>
-            <option>Monotributista</option>
-            <option>Autónomo</option>
-            <option>Desempleado</option>
-        </select>
-    </p>
+        <div class="opcion">
+            <input type="radio" name="trabaja" value="si" id="trabaja_si">
+            <label for="trabaja_si">Sí</label>
+        </div>
+
+        <div class="opcion">
+            <input type="radio" name="trabaja" value="no" id="trabaja_no">
+            <label for="trabaja_no">No</label>
+        </div>
+
+        <div>
+            <label>Tipo de empleo</label>
+        </div>
+
+        <div>
+            <select name="tipoEmpleo">
+                <option>Relación de dependencia</option>
+                <option>Monotributista</option>
+                <option>Autónomo</option>
+                <option>Desempleado</option>
+            </select>
+        </div>
     </div>
 
     <div class="form-group">
         <h2>Información económica</h2>
 
+        <div>
             <label>Ingreso mensual</label>
-            <input type="number" name="ingresoMensual"/>
-        <p>
-            <label>¿Tiene deudas?</label>
-            <input type="radio" name="deudas" value="si"/>
-            <label>Si</label>
-            <input type="radio" name="deudas" value="no"/>
-            <label>No</label>
-        </p>
+        </div>
 
-        <label>Tipo de deuda</label>
-        <input type="checkbox" name="tipoDeuda" value="Tarjeta de crédito"/>
-        <label>Tarjeta de crédito</label>
-        <input type="checkbox" name="tipoDeuda" value="Préstamo bancario"/>
-        <label>Préstamo bancario</label>
-        <input type="checkbox" name="tipoDeuda" value="Préstamo informal"/>
-        <label>Préstamo informal</label>
+        <div>
+            <input type="number" name="ingresoMensual" />
+        </div>
+
+        <div>
+            <label>¿Tiene deudas?</label>
+        </div>
+
+        <div class="opcion">
+            <input type="radio" name="deudas" value="si" id="deudas_si" />
+            <label for="deudas_si">Sí</label>
+        </div>
+
+        <div class="opcion">
+            <input type="radio" name="deudas" value="no" id="deudas_no" />
+            <label for="deudas_no">No</label>
+        </div>
+
+        <div>
+            <label>Tipo de deuda</label>
+        </div>
+
+        <div class="opcion">
+            <input type="checkbox" name="tipoDeuda" value="Tarjeta de crédito" id="tarjeta" />
+            <label for="tarjeta">Tarjeta de crédito</label>
+        </div>
+
+        <div class="opcion">
+            <input type="checkbox" name="tipoDeuda" value="Préstamo bancario" id="prestamo_bancario" />
+            <label for="prestamo_bancario">Préstamo bancario</label>
+        </div>
+
+        <div class="opcion">
+            <input type="checkbox" name="tipoDeuda" value="Préstamo informal" id="prestamo_informal" />
+            <label for="prestamo_informal">Préstamo informal</label>
+        </div>
     </div>
 
     <div class="form-group">
         <h2>Información del préstamo</h2>
 
-        <input type="number" name="montoSolucitado"/>
-    <p>
-        <select name="plazo">
-            <option>6 meses</option>
-            <option>12 meses</option>
-            <option>24 meses</option>
-        </select>
-    </p>
+        <div>
+            <label>Monto solicitado</label>
+        </div>
+
+        <div>
+            <input type="number" name="montoSolicitado" />
+        </div>
+
+        <div>
+            <label>Plazo</label>
+        </div>
+
+        <div>
+            <select name="plazo">
+                <option>6 meses</option>
+                <option>12 meses</option>
+                <option>24 meses</option>
+            </select>
+        </div>
     </div>
 
-    <label>Aceptar términos y condiciones</label>
-    <input type="checkbox" name="aceptarTerminos" value="true"/>
+    <div class="opcion">
+        <input type="checkbox" name="aceptarTerminos" value="true" id="terminos" />
+        <label for="terminos">Aceptar términos y condiciones</label>
+    </div>
 
-    <button type="submit">Enviar Datos</button>
+    <div>
+        <button type="submit">Enviar Datos</button>
+    </div>
 </form>

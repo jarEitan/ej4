@@ -22,7 +22,10 @@ public class HomeController : Controller
     public IActionResult Resultado(string nombre, int edad, int DNI, string trabaja, string tipoEmpleo, int ingresoMensual, string deudas, string[] tipoDeuda, int montoSolucitado, string plazo, bool aceptarTerminos)
     {
         bool si = true;
-        if (edad <18){
+
+        Console.WriteLine(nombre + edad + DNI + trabaja + tipoEmpleo + ingresoMensual + deudas + tipoDeuda + montoSolucitado + plazo + aceptarTerminos);
+
+        if (edad < 18){
             si = false;
         }
         else if (trabaja == "no")
@@ -41,7 +44,7 @@ public class HomeController : Controller
         {
             si = false;
         }
-        else if (!aceptarTerminos)
+        else if (aceptarTerminos == false)
         {
             si = false;
         }
@@ -50,6 +53,7 @@ public class HomeController : Controller
             si = true;
         }
 
+        ViewBag.edad = edad;
         ViewBag.si = si;
 
         return View();
